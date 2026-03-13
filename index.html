@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madame Chic – Kadeřnictví Český Brod | Stříhání, Barvení, Péče o vlasy</title>
+    <meta name="description" content="Madame Chic – profesionální kadeřnické služby v Českém Brodě. Tým zkušených kadeřnic s osobním přístupem. Rezervujte online.">
+    <meta name="keywords" content="kadeřnictví Český Brod, stříhání vlasů Český Brod, barvení vlasů Český Brod, Madame Chic, kadeřnice Český Brod">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/airbnb.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "Madame Chic",
+        "description": "Rodinné kadeřnictví s osobním přístupem v Českém Brodě",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Boženy Němcové 131",
+            "addressLocality": "Český Brod",
+            "addressCountry": "CZ"
+        },
+        "telephone": "+420606785753",
+        "priceRange": "250–800 Kč",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "127"
+        }
+    }
+    </script>
+</head>
+<body>
+
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span class="logo-diamond">◆</span>
+                <span class="logo-text">Madame Chic</span>
+            </a>
+            <nav class="nav" id="nav">
+                <div class="nav-links">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#about" class="nav-link">O nás</a>
+                    <a href="#services" class="nav-link">Služby</a>
+                    <a href="#gallery" class="nav-link">Galerie</a>
+                    <a href="#blog" class="nav-link">Blog</a>
+                    <a href="#voucher" class="nav-link">Voucher</a>
+                    <a href="#contact" class="nav-link">Kontakt</a>
+                </div>
+
+                <div class="nav-mobile-extras">
+                    <a href="#booking" class="btn btn-primary nav-mobile-cta">Rezervovat termín</a>
+
+                    <div class="nav-mobile-widget">
+                        <span class="nav-widget-title">Proměna měsíce</span>
+                        <div class="nav-widget-image">
+                            <div class="nav-widget-half">
+                                <span class="nav-widget-tag">Před</span>
+                            </div>
+                            <div class="nav-widget-half">
+                                <span class="nav-widget-tag">Po</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-mobile-widget">
+                        <span class="nav-widget-title">Řekli o nás</span>
+                        <blockquote class="nav-widget-quote">„Lucie mi vždy perfektně upraví vlasy a poradí s péčí. Skvělé rodinné kadeřnictví!“</blockquote>
+                        <div class="nav-widget-author">- Jana, Český Brod</div>
+                    </div>
+                </div>
+            </nav>
+            <a href="#booking" class="btn btn-primary header-cta">Rezervovat termín</a>
+            <button class="hamburger" id="hamburger" aria-label="Otevřít menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-bg-gradient"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="hero-badge" data-animate>
+                    <span class="hero-badge-dot"></span>
+                    Rodinné kadeřnictví v Českém Brodě
+                </span>
+                <h1 class="hero-title" data-animate>
+                    Vlasy, ve kterých se budete<br>cítit <em>skvěle</em>
+                </h1>
+                <p class="hero-subtitle" data-animate>Rodinné kadeřnictví s péčí o každý detail. Profesionální přístup, pohodová atmosféra a služby přizpůsobené právě vám.</p>
+                <div class="hero-actions" data-animate>
+                    <a href="#booking" class="btn btn-primary btn-lg">
+                        <span>Rezervujte online</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#services" class="btn btn-ghost btn-lg">Naše služby</a>
+                </div>
+                <div class="hero-trust" data-animate>
+                    <div class="hero-trust-item">
+                        <div class="hero-stars">★★★★★</div>
+                        <span>4.9 / 5 hodnocení</span>
+                    </div>
+                    <div class="hero-trust-sep"></div>
+                    <div class="hero-trust-item">
+                        <span class="hero-trust-num">127+</span>
+                        <span>spokojených klientů</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual" data-animate>
+                <div class="hero-image-frame">
+                    <div class="hero-image-placeholder">
+                        <span>Foto týmu při práci</span>
+                    </div>
+                </div>
+                <div class="hero-floating-card">
+                    <span class="hero-floating-icon">✂️</span>
+                    <div>
+                        <strong>10+ let</strong>
+                        <span>zkušeností</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-col" data-animate>
+                    <div class="about-image-wrapper">
+                        <div class="about-image-placeholder">
+                            <span>Foto týmu</span>
+                        </div>
+                        <div class="about-image-accent"></div>
+                    </div>
+                </div>
+                <div class="about-content" data-animate>
+                    <span class="label">O nás</span>
+                    <h2 class="heading-lg">Náš tým se o vás<br>postará s láskou</h2>
+                    <p class="text-body">Jsme tým zkušených kadeřnic, které se věnují každému klientovi s láskou a pečlivostí. Naše rodinné kadeřnictví v Českém Brodě nabízí osobní přístup, pohodovou atmosféru a služby přizpůsobené potřebám každého zákazníka.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-num">10+</span>
+                            <span class="stat-label">let zkušeností</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num">127+</span>
+                            <span class="stat-label">spokojených klientů</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num">4.9</span>
+                            <span class="stat-label">průměrné hodnocení</span>
+                        </div>
+                    </div>
+                    <a href="#booking" class="btn btn-primary">Rezervovat termín</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header" data-animate>
+                <span class="label label-center">Reference</span>
+                <h2 class="heading-lg heading-center">Co říkají naši klienti</h2>
+            </div>
+            <div class="testimonials-grid" data-animate>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <blockquote class="testimonial-text">„Lucie mi vždy perfektně upraví vlasy a poradí s péčí. Skvělé rodinné kadeřnictví!"</blockquote>
+                    <div class="testimonial-author">
+                        <div class="avatar">J</div>
+                        <div><strong>Jana</strong><span>Český Brod</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <blockquote class="testimonial-text">„Profesionální přístup a osobní péče – vždy spokojenost. Doporučuji všem!"</blockquote>
+                    <div class="testimonial-author">
+                        <div class="avatar">P</div>
+                        <div><strong>Petr</strong><span>Český Brod</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <blockquote class="testimonial-text">„Konečně kadeřnictví, kde se cítím jako doma. Celý tým rozumí tomu, co chci."</blockquote>
+                    <div class="testimonial-author">
+                        <div class="avatar">M</div>
+                        <div><strong>Marie</strong><span>Český Brod</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-header" data-animate>
+                <span class="label label-center">Služby</span>
+                <h2 class="heading-lg heading-center">Co pro vás připravíme</h2>
+                <p class="text-body text-center text-muted">Každá služba je přizpůsobena vašim přáním a typu vlasů.</p>
+            </div>
+            <div class="services-grid" data-animate>
+                <div class="service-card">
+                    <div class="service-icon-wrap"><span class="service-icon">✂️</span></div>
+                    <h3 class="service-name">Stříhání dámské</h3>
+                    <p class="service-desc">Profesionální střih vlasů dle typu a přání klientky.</p>
+                    <div class="service-price">od <strong>400 Kč</strong></div>
+                    <a href="#booking" class="btn btn-outline btn-sm">Rezervovat</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-wrap"><span class="service-icon">💈</span></div>
+                    <h3 class="service-name">Stříhání pánské</h3>
+                    <p class="service-desc">Úprava vlasů a vousů, moderní střihy.</p>
+                    <div class="service-price">od <strong>300 Kč</strong></div>
+                    <a href="#booking" class="btn btn-outline btn-sm">Rezervovat</a>
+                </div>
+                <div class="service-card service-card-featured">
+                    <span class="service-badge">Nejoblíbenější</span>
+                    <div class="service-icon-wrap"><span class="service-icon">🎨</span></div>
+                    <h3 class="service-name">Barvení vlasů</h3>
+                    <p class="service-desc">Profesionální barvení, přirozené přechody a tónování.</p>
+                    <div class="service-price">od <strong>800 Kč</strong></div>
+                    <a href="#booking" class="btn btn-primary btn-sm">Rezervovat</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-wrap"><span class="service-icon">👶</span></div>
+                    <h3 class="service-name">Dětské střihy</h3>
+                    <p class="service-desc">Šetrné stříhání pro děti, přátelská atmosféra.</p>
+                    <div class="service-price">od <strong>250 Kč</strong></div>
+                    <a href="#booking" class="btn btn-outline btn-sm">Rezervovat</a>
+                </div>
+            </div>
+            <div class="section-cta" data-animate>
+                <a href="#booking" class="btn btn-primary btn-lg">Rezervovat termín</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-dark" id="gallery">
+        <div class="container">
+            <div class="section-header" data-animate>
+                <span class="label label-center label-light">Galerie</span>
+                <h2 class="heading-lg heading-center heading-light">Proměny našich klientů</h2>
+            </div>
+            <div class="gallery-grid" data-animate id="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-ba">
+                        <div class="gallery-half">
+                            <div class="gallery-placeholder"></div>
+                            <span class="gallery-tag">Před</span>
+                        </div>
+                        <div class="gallery-half">
+                            <div class="gallery-placeholder gallery-placeholder-after"></div>
+                            <span class="gallery-tag">Po</span>
+                        </div>
+                    </div>
+                    <p class="gallery-caption">Barvení a střih – přirozený přechod</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-ba">
+                        <div class="gallery-half">
+                            <div class="gallery-placeholder"></div>
+                            <span class="gallery-tag">Před</span>
+                        </div>
+                        <div class="gallery-half">
+                            <div class="gallery-placeholder gallery-placeholder-after"></div>
+                            <span class="gallery-tag">Po</span>
+                        </div>
+                    </div>
+                    <p class="gallery-caption">Kompletní proměna – nový střih</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-ba">
+                        <div class="gallery-half">
+                            <div class="gallery-placeholder"></div>
+                            <span class="gallery-tag">Před</span>
+                        </div>
+                        <div class="gallery-half">
+                            <div class="gallery-placeholder gallery-placeholder-after"></div>
+                            <span class="gallery-tag">Po</span>
+                        </div>
+                    </div>
+                    <p class="gallery-caption">Balayage – letní osvěžení</p>
+                </div>
+                <div class="gallery-item gallery-hidden">
+                    <div class="gallery-ba">
+                        <div class="gallery-half">
+                            <div class="gallery-placeholder"></div>
+                            <span class="gallery-tag">Před</span>
+                        </div>
+                        <div class="gallery-half">
+                            <div class="gallery-placeholder gallery-placeholder-after"></div>
+                            <span class="gallery-tag">Po</span>
+                        </div>
+                    </div>
+                    <p class="gallery-caption">Ombré – plynulý přechod tónů</p>
+                </div>
+                <div class="gallery-item gallery-hidden">
+                    <div class="gallery-ba">
+                        <div class="gallery-half">
+                            <div class="gallery-placeholder"></div>
+                            <span class="gallery-tag">Před</span>
+                        </div>
+                        <div class="gallery-half">
+                            <div class="gallery-placeholder gallery-placeholder-after"></div>
+                            <span class="gallery-tag">Po</span>
+                        </div>
+                    </div>
+                    <p class="gallery-caption">Krátký střih – odvážná změna</p>
+                </div>
+                <div class="gallery-item gallery-hidden">
+                    <div class="gallery-ba">
+                        <div class="gallery-half">
+                            <div class="gallery-placeholder"></div>
+                            <span class="gallery-tag">Před</span>
+                        </div>
+                        <div class="gallery-half">
+                            <div class="gallery-placeholder gallery-placeholder-after"></div>
+                            <span class="gallery-tag">Po</span>
+                        </div>
+                    </div>
+                    <p class="gallery-caption">Regenerace – oživení unavených vlasů</p>
+                </div>
+            </div>
+            <div class="section-cta" data-animate>
+                <button class="btn btn-outline btn-lg btn-light-outline" id="gallery-toggle">Zobrazit další proměny</button>
+                <a href="#booking" class="btn btn-primary btn-lg" style="margin-left: 16px;">Chci svou proměnu</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="blog">
+        <div class="container">
+            <div class="section-header" data-animate>
+                <span class="label label-center">Blog</span>
+                <h2 class="heading-lg heading-center">Tipy pro krásné vlasy</h2>
+            </div>
+            <div class="blog-grid" data-animate>
+                <article class="blog-card">
+                    <div class="blog-img-placeholder"><span>📖</span></div>
+                    <div class="blog-body">
+                        <span class="blog-date">15. ledna 2026</span>
+                        <h3>Jak pečovat o vlasy v Českém Brodě během zimy</h3>
+                        <p>Zima je pro vlasy náročná. Přečtěte si naše tipy, jak je udržet zdravé a krásné i v mrazech.</p>
+                        <a href="#" class="link-arrow">Číst více →</a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-img-placeholder"><span>✨</span></div>
+                    <div class="blog-body">
+                        <span class="blog-date">3. února 2026</span>
+                        <h3>Nejlepší střihy pro každou délku vlasů</h3>
+                        <p>Krátké, střední nebo dlouhé? Poradíme vám, jaký střih bude vypadat nejlépe.</p>
+                        <a href="#" class="link-arrow">Číst více →</a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-img-placeholder"><span>🎨</span></div>
+                    <div class="blog-body">
+                        <span class="blog-date">20. února 2026</span>
+                        <h3>Barvení vlasů doma vs. profesionální služby</h3>
+                        <p>Kdy si poradit doma a kdy raději navštívit profesionála? Rozdíly jsou větší, než si myslíte.</p>
+                        <a href="#" class="link-arrow">Číst více →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header" data-animate>
+                <span class="label label-center">Doporučené produkty</span>
+                <h2 class="heading-lg heading-center">Péče, které důvěřujeme</h2>
+                <p class="text-body text-center">Při zadání kódu <strong class="text-accent">MADAME10</strong> sleva 10 % na partnerském e-shopu</p>
+            </div>
+            <div class="products-grid" data-animate>
+                <div class="product-card">
+                    <div class="product-img">🧴</div>
+                    <h3>Regenerační šampon</h3>
+                    <p>Pro poškozené a barvené vlasy</p>
+                    <a href="#" class="btn btn-outline btn-sm">Koupit</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">💆</div>
+                    <h3>Hydratační maska</h3>
+                    <p>Hloubková výživa a lesk</p>
+                    <a href="#" class="btn btn-outline btn-sm">Koupit</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">✨</div>
+                    <h3>Sérum na konečky</h3>
+                    <p>Proti třepení a lámání</p>
+                    <a href="#" class="btn btn-outline btn-sm">Koupit</a>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">🌿</div>
+                    <h3>Přírodní olej na vlasy</h3>
+                    <p>Arganový olej pro hedvábný lesk</p>
+                    <a href="#" class="btn btn-outline btn-sm">Koupit</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-booking" id="booking">
+        <div class="container">
+            <div class="section-header" data-animate>
+                <span class="label label-center">Rezervace a kontakt</span>
+                <h2 class="heading-lg heading-center">Rezervujte si termín</h2>
+                <p class="text-body text-center text-muted">Rezervujte online nebo nás kontaktujte přímo</p>
+            </div>
+
+            <div class="booking-contact-grid" data-animate>
+
+            <div class="booking-contact-sidebar">
+                <h3 class="contact-sidebar-title">Kontaktní údaje</h3>
+                <div class="contact-info-card">
+                    <div class="contact-info-item">
+                        <span class="contact-info-icon">👩‍🦰</span>
+                        <div>
+                            <strong>Lucie Čermáková (Košíková)</strong>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <span class="contact-info-icon">📍</span>
+                        <div>
+                            <strong>Adresa</strong>
+                            <span>Boženy Němcové 131<br>Český Brod</span>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <span class="contact-info-icon">📞</span>
+                        <div>
+                            <strong>Telefon</strong>
+                            <a href="tel:+420606785753">+420 606 785 753</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <span class="contact-info-icon">💬</span>
+                        <div>
+                            <strong>WhatsApp</strong>
+                            <a href="https://wa.me/420606785753">+420 606 785 753</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <span class="contact-info-icon">🅿️</span>
+                        <div>
+                            <strong>Parkování</strong>
+                            <span>Přímo před studiem v ulici Boženy Němcové</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map-wrapper">
+                    <div class="map-placeholder-booking">Google Maps</div>
+                </div>
+            </div>
+
+            <div class="booking-wrapper">
+                <div class="booking-steps">
+                    <div class="booking-step active" data-step="1">
+                        <div class="step-num">1</div>
+                        <span>Služba</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="booking-step" data-step="2">
+                        <div class="step-num">2</div>
+                        <span>Termín</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="booking-step" data-step="3">
+                        <div class="step-num">3</div>
+                        <span>Údaje</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="booking-step" data-step="4">
+                        <div class="step-num">4</div>
+                        <span>Hotovo</span>
+                    </div>
+                </div>
+
+                <div class="booking-panel active" id="step-1">
+                    <h3>Vyberte službu</h3>
+                    <div class="service-options">
+                        <label class="service-option">
+                            <input type="radio" name="service" value="damske-strihani">
+                            <span class="service-option-box">
+                                <span class="service-option-icon">✂️</span>
+                                <span class="service-option-name">Stříhání dámské</span>
+                                <span class="service-option-price">od 400 Kč</span>
+                            </span>
+                        </label>
+                        <label class="service-option">
+                            <input type="radio" name="service" value="panske-strihani">
+                            <span class="service-option-box">
+                                <span class="service-option-icon">💈</span>
+                                <span class="service-option-name">Stříhání pánské</span>
+                                <span class="service-option-price">od 300 Kč</span>
+                            </span>
+                        </label>
+                        <label class="service-option">
+                            <input type="radio" name="service" value="barveni">
+                            <span class="service-option-box">
+                                <span class="service-option-icon">🎨</span>
+                                <span class="service-option-name">Barvení vlasů</span>
+                                <span class="service-option-price">od 800 Kč</span>
+                            </span>
+                        </label>
+                        <label class="service-option">
+                            <input type="radio" name="service" value="detske-strihy">
+                            <span class="service-option-box">
+                                <span class="service-option-icon">👶</span>
+                                <span class="service-option-name">Dětské střihy</span>
+                                <span class="service-option-price">od 250 Kč</span>
+                            </span>
+                        </label>
+                        <label class="service-option">
+                            <input type="radio" name="service" value="voucher">
+                            <span class="service-option-box">
+                                <span class="service-option-icon">🎁</span>
+                                <span class="service-option-name">Dárkový voucher</span>
+                                <span class="service-option-price">libovolná hodnota</span>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="booking-actions">
+                        <button class="btn btn-primary btn-next" data-next="2">Pokračovat</button>
+                    </div>
+                </div>
+
+                <div class="booking-panel" id="step-2">
+                    <h3>Preferovaný termín</h3>
+                    <p class="text-muted" style="margin-bottom: 24px; font-size: 0.9rem; line-height: 1.6;">Vyberte si den a část dne, která by vám nejvíce vyhovovala. Po odeslání rezervace se vám co nejdříve ozveme a domluvíme s vámi konkrétní volný čas.</p>
+
+                    <div class="form-group">
+                        <label class="form-label">Preferované datum</label>
+                        <input type="text" class="form-input" id="booking-date" placeholder="Vyberte datum" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Preferovaný čas</label>
+                        <div class="time-slots">
+                            <button type="button" class="time-slot" data-time="rano">Ráno</button>
+                            <button type="button" class="time-slot" data-time="dopoledne">Dopoledne</button>
+                            <button type="button" class="time-slot" data-time="odpoledne">Odpoledne</button>
+                            <button type="button" class="time-slot" data-time="vecer">Večer</button>
+                        </div>
+                    </div>
+                    <div class="booking-actions">
+                        <button class="btn btn-ghost btn-back" data-back="1">← Zpět</button>
+                        <button class="btn btn-primary btn-next" data-next="3">Pokračovat</button>
+                    </div>
+                </div>
+
+                <div class="booking-panel" id="step-3">
+                    <h3>Vaše údaje</h3>
+
+                    <div class="voucher-fields-wrap" id="voucher-fields">
+                        <h4>Detaily voucheru</h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Hodnota voucheru (Kč)</label>
+                                <select class="form-input" name="voucher-value">
+                                    <option value="500">500 Kč</option>
+                                    <option value="1000">1 000 Kč</option>
+                                    <option value="1500">1 500 Kč</option>
+                                    <option value="2000">2 000 Kč</option>
+                                    <option value="custom">Jiná částka (domluvíme se)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Jméno na voucher (volitelné)</label>
+                                <input type="text" class="form-input" placeholder="Např. Pro maminku">
+                            </div>
+                        </div>
+                        <p>Voucher pro vás krásně zabalíme. K vyzvednutí a platbě bude připraven přímo v našem studiu.</p>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Jméno a příjmení</label>
+                            <input type="text" class="form-input" placeholder="Jana Nováková">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Telefon</label>
+                            <input type="tel" class="form-input" placeholder="+420 600 000 000">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">E-mail</label>
+                        <input type="email" class="form-input" placeholder="jana@email.cz">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Poznámka (volitelné)</label>
+                        <textarea class="form-input form-textarea" placeholder="Máte speciální přání?"></textarea>
+                    </div>
+                    <label class="checkbox-wrap">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span>Souhlasím s <a href="#">obchodními podmínkami</a> a zpracováním <a href="#">osobních údajů (GDPR)</a></span>
+                    </label>
+                    <div class="booking-actions">
+                        <button class="btn btn-ghost btn-back" data-back="2">← Zpět</button>
+                        <button class="btn btn-primary btn-next" data-next="4">Odeslat rezervaci</button>
+                    </div>
+                </div>
+
+                <div class="booking-panel" id="step-4">
+                    <div class="booking-success">
+                        <div class="success-checkmark">✓</div>
+                        <h3>Děkujeme!</h3>
+                        <p>Vaše žádost byla odeslána. Ozveme se vám do 24 hodin.</p>
+                        <a href="#home" class="btn btn-primary">Zpět na hlavní stránku</a>
+                    </div>
+                </div>
+            </div>
+
+            </div></div>
+    </section>
+
+    <section class="section section-voucher" id="voucher">
+        <div class="container">
+            <div class="voucher-grid" data-animate>
+                <div class="voucher-content">
+                    <span class="label">Dárkový voucher</span>
+                    <h2 class="heading-lg">Darujte krásu<br>a péči</h2>
+                    <p class="text-body">Darujte svým blízkým dárkový voucher s volitelnou hodnotou. Voucher zakoupíte přímo na pobočce našeho studia.</p>
+                    <ul class="voucher-features">
+                        <li><span class="feature-dot"></span>Volba hodnoty 250–2 000 Kč</li>
+                        <li><span class="feature-dot"></span>Zakoupení přímo ve studiu</li>
+                        <li><span class="feature-dot"></span>Krásný tištěný voucher jako dárek</li>
+                        <li><span class="feature-dot"></span>Platnost 12 měsíců od zakoupení</li>
+                    </ul>
+                    <a href="#booking" class="btn btn-primary btn-lg">Objednat voucher online</a>
+                </div>
+                <div class="voucher-visual">
+                    <div class="voucher-card">
+                        <div class="voucher-card-bg"></div>
+                        <div class="voucher-card-content">
+                            <span class="voucher-card-logo">◆ Madame Chic</span>
+                            <div class="voucher-card-title">Dárkový voucher</div>
+                            <div class="voucher-card-amount">500 Kč</div>
+                            <div class="voucher-card-validity">Platný 12 měsíců od zakoupení</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="faq">
+        <div class="container container-sm">
+            <div class="section-header" data-animate>
+                <span class="label label-center">Časté dotazy</span>
+                <h2 class="heading-lg heading-center">Máte otázky?</h2>
+            </div>
+            <div class="faq-list" data-animate>
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span>Jak probíhá rezervace?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Jednoduše vyplňte náš online formulář – vyberte službu, termín a zadejte kontaktní údaje. Do 24 hodin vám potvrdíme rezervaci e-mailem nebo telefonicky.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span>Jak mohu změnit nebo zrušit termín?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Kontaktujte nás telefonicky nebo e-mailem nejméně 24 hodin před plánovaným termínem. Změna i zrušení je zdarma.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span>Jak mohu koupit voucher?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Dárkový voucher zakoupíte přímo na pobočce našeho studia na adrese Boženy Němcové 131, Český Brod. Můžete si vybrat libovolnou hodnotu od 250 do 2 000 Kč.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span>Kde vás najdu a kde zaparkuji?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Naše studio se nachází na adrese Boženy Němcové 131 v Českém Brodě. Parkování je přímo před vlasovým studiem v ulici Boženy Němcové.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header" data-animate>
+                <span class="label label-center">Sociální sítě</span>
+                <h2 class="heading-lg heading-center">Sledujte nás</h2>
+                <p class="text-body text-center text-muted">Inspirace, tipy a novinky z našeho kadeřnictví</p>
+            </div>
+            <div class="social-grid" data-animate>
+                <div class="social-card">
+                    <div class="social-card-header">
+                        <span class="social-icon social-fb">f</span>
+                        <span>Facebook</span>
+                    </div>
+                    <div class="social-placeholder">
+                        <p>Živý Facebook feed</p>
+                        <small>Napojení přes Facebook Page Plugin</small>
+                    </div>
+                </div>
+                <div class="social-card">
+                    <div class="social-card-header">
+                        <span class="social-icon social-ig">◻</span>
+                        <span>Instagram</span>
+                    </div>
+                    <div class="social-placeholder">
+                        <p>Živý Instagram feed</p>
+                        <small>Napojení přes Instagram Basic Display API</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-cta-final">
+        <div class="container" data-animate>
+            <h2 class="heading-xl heading-light heading-center">Připraveni na proměnu?</h2>
+            <p class="text-body text-center text-light-muted">Rezervujte si termín ještě dnes a svěřte se do rukou, které se o vás postarají.</p>
+            <a href="#booking" class="btn btn-white btn-lg">Rezervovat termín</a>
+        </div>
+    </section>
+
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo logo-light">
+                        <span class="logo-diamond">◆</span>
+                        <span class="logo-text">Madame Chic</span>
+                    </a>
+                    <p class="footer-tagline">Rodinné kadeřnictví<br>v srdci Českého Brodu</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-btn" aria-label="Facebook">FB</a>
+                        <a href="#" class="social-btn" aria-label="Instagram">IG</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigace</h4>
+                    <a href="#home">Home</a>
+                    <a href="#about">O nás</a>
+                    <a href="#services">Služby</a>
+                    <a href="#gallery">Galerie</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#voucher">Voucher</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Služby</h4>
+                    <a href="#services">Stříhání dámské</a>
+                    <a href="#services">Stříhání pánské</a>
+                    <a href="#services">Barvení vlasů</a>
+                    <a href="#services">Dětské střihy</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontakt</h4>
+                    <p>Lucie Čermáková (Košíková)</p>
+                    <p>Boženy Němcové 131, Český Brod</p>
+                    <p><a href="tel:+420606785753">+420 606 785 753</a></p>
+                    <p>WhatsApp: <a href="https://wa.me/420606785753">+420 606 785 753</a></p>
+                    <div class="footer-map">
+                        <div class="map-placeholder">Google Maps</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Madame Chic. Všechna práva vyhrazena.</p>
+                <div class="footer-links">
+                    <a href="#">Obchodní podmínky</a>
+                    <a href="#">GDPR</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cookie-banner" id="cookie-banner">
+        <div class="cookie-content">
+            <p>Tento web používá cookies pro zlepšení vašeho zážitku. <a href="#">Více informací</a></p>
+            <div class="cookie-actions">
+                <button class="btn btn-ghost btn-sm" id="cookie-decline">Odmítnout</button>
+                <button class="btn btn-primary btn-sm" id="cookie-accept">Přijmout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/cs.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
