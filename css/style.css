@@ -496,7 +496,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 .bento-card h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; color: var(--gray-800); margin-bottom: 12px; }
 .bento-card p { font-size: 0.95rem; color: var(--gray-500); line-height: 1.6; }
 .bento-primary { grid-column: span 2; background: linear-gradient(135deg, #ffffff, var(--purple-50)); border-color: var(--purple-200); display: flex; align-items: center; }
-.bento-map { grid-column: span 3; }
+.bento-map { grid-column: span 2; }
 .bento-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 24px; }
 .bento-list { list-style: none; margin-top: 16px; display: flex; flex-direction: column; gap: 12px; padding: 0; }
 .bento-list li { display: flex; justify-content: space-between; font-size: 0.95rem; color: var(--gray-600); padding-bottom: 8px; border-bottom: 1px solid var(--gray-100); }
