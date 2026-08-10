@@ -1,21 +1,32 @@
 /* ===================================================
-   ZÁKLADNÍ PROMĚNNÉ A RESET
+   1. ZÁKLADNÍ PROMĚNNÉ A RESET
    =================================================== */
 :root {
+    /* Hlavní barvy (Fialová / Madame Chic) */
     --primary: #8b5cf6;
     --primary-dark: #7c3aed;
     --primary-light: #c4b5fd;
+    --primary-bg: #f3e8ff;
+
+    /* Neutrální barvy */
     --gray-50: #f9fafb;
     --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
     --gray-500: #6b7280;
     --gray-600: #4b5563;
     --gray-800: #1f2937;
     --gray-900: #111827;
     --white: #ffffff;
+
+    /* Typografie */
     --font-display: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
+
+    /* Zaoblení a stíny */
     --radius-lg: 16px;
     --radius-md: 8px;
+    --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.05);
+    --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.1);
 }
 
 * {
@@ -39,8 +50,12 @@ body {
     padding: 0 24px;
 }
 
+.container-sm {
+    max-width: 800px;
+}
+
 /* ===================================================
-   TYPOGRAFIE A TLAČÍTKA
+   2. TYPOGRAFIE A TLAČÍTKA
    =================================================== */
 .heading-xl, .heading-lg, .heading-md {
     font-family: var(--font-display);
@@ -52,10 +67,16 @@ body {
 .heading-center { text-align: center; }
 .heading-light { color: var(--white); }
 
+.text-body { font-size: 1.1rem; margin-bottom: 24px; }
+.text-center { text-align: center; }
+.text-muted { color: var(--gray-500); }
+.text-light-muted { color: rgba(255,255,255,0.8); }
+.text-accent { color: var(--primary); }
+
 .label {
     display: inline-block;
     padding: 6px 16px;
-    background-color: #f3e8ff;
+    background-color: var(--primary-bg);
     color: var(--primary-dark);
     border-radius: 50px;
     font-weight: 600;
@@ -84,11 +105,13 @@ body {
 .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 10px 20px -10px rgba(139, 92, 246, 0.5); }
 .btn-outline { border-color: var(--primary-light); color: var(--primary-dark); background: transparent; }
 .btn-outline:hover { background: var(--primary); color: var(--white); border-color: var(--primary); }
+.btn-white { background: var(--white); color: var(--primary-dark); }
+.btn-white:hover { background: var(--gray-100); transform: translateY(-2px); }
 .btn-sm { padding: 10px 20px; font-size: 0.9rem; }
 .btn-lg { padding: 16px 32px; font-size: 1.1rem; }
 
 /* ===================================================
-   ANIMACE PŘI SCROLLOVÁNÍ
+   3. ANIMACE PŘI SCROLLOVÁNÍ
    =================================================== */
 [data-animate] {
     opacity: 0;
@@ -101,41 +124,107 @@ body {
 }
 
 /* ===================================================
-   HLAVIČKA A NAVIGACE
+   4. HLAVIČKA A NAVIGACE
    =================================================== */
 .header {
     position: fixed;
     top: 0; left: 0; right: 0;
     background: transparent;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
+    transition: background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
     z-index: 1000;
     padding: 20px 0;
 }
 .header.scrolled {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-sm);
     padding: 12px 0;
 }
 .header-inner { display: flex; justify-content: space-between; align-items: center; }
 .logo { display: flex; align-items: center; gap: 8px; font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--gray-900); text-decoration: none; }
+.logo-light { color: var(--white); }
 .logo-diamond { color: var(--primary); }
 
 .nav-links { display: flex; gap: 32px; }
 .nav-link { color: var(--gray-600); text-decoration: none; font-weight: 500; transition: color 0.2s; }
 .nav-link:hover, .nav-link.active { color: var(--primary); }
 .nav-mobile-extras { display: none; }
+.hamburger { display: none; }
 
 /* ===================================================
-   SEKCE (OBECNÉ)
+   5. SEKCE OBECNĚ
    =================================================== */
 .section { padding: 100px 0; }
-.bg-light { background-color: var(--white); }
+.section-alt { background-color: var(--white); }
 .section-dark { background-color: var(--gray-900); color: var(--white); }
 .section-header { margin-bottom: 56px; }
 
 /* ===================================================
-   VIP SLUŽBY
+   6. HERO SEKCE (Úvodní obrazovka)
+   =================================================== */
+.hero {
+    position: relative;
+    padding: 160px 0 100px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f8f5ff 0%, #ffffff 100%);
+}
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 48px;
+    align-items: center;
+}
+.hero-title em { color: var(--primary); font-style: normal; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; }
+.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--white); padding: 8px 16px; border-radius: 50px; font-size: 0.9rem; font-weight: 500; box-shadow: var(--shadow-sm); border: 1px solid var(--gray-100); }
+.hero-badge-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--primary); }
+.status-open .hero-badge-dot { background: #10b981; } /* Zelená otevřeno */
+.status-closed .hero-badge-dot { background: #ef4444; } /* Červená zavřeno */
+.hero-actions { display: flex; gap: 16px; margin-bottom: 48px; }
+.hero-trust { display: flex; align-items: center; gap: 24px; color: var(--gray-500); font-size: 0.95rem; }
+.hero-stars { color: #f59e0b; font-size: 1.2rem; letter-spacing: 2px; }
+.hero-trust-sep { width: 1px; height: 30px; background: var(--gray-200); }
+.hero-trust-num { font-weight: 700; color: var(--gray-900); font-size: 1.2rem; margin-right: 4px; }
+
+.hero-visual { position: relative; }
+.hero-image-frame { border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-md); aspect-ratio: 4/5; background: var(--gray-200); display: flex; align-items: center; justify-content: center; }
+.hero-image-placeholder { color: var(--gray-500); }
+.hero-floating-card { position: absolute; bottom: -20px; left: -20px; background: var(--white); padding: 16px 24px; border-radius: 16px; box-shadow: var(--shadow-md); display: flex; align-items: center; gap: 16px; animation: float 6s ease-in-out infinite; }
+.hero-floating-icon { font-size: 2rem; background: var(--primary-bg); width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 12px; }
+.hero-floating-card strong { display: block; color: var(--gray-900); font-size: 1.2rem; line-height: 1.2; }
+.hero-floating-card span { font-size: 0.85rem; color: var(--gray-500); }
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* ===================================================
+   7. O NÁS & STATISTIKY
+   =================================================== */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.about-image-wrapper { position: relative; aspect-ratio: 1/1; }
+.about-image-placeholder { width: 100%; height: 100%; background: var(--gray-200); border-radius: 24px; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2; box-shadow: var(--shadow-sm); }
+.about-image-accent { position: absolute; bottom: -20px; right: -20px; width: 60%; height: 60%; background: var(--primary-bg); border-radius: 24px; z-index: 1; }
+.about-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px; padding-top: 24px; border-top: 1px solid var(--gray-200); }
+.stat-num { display: block; font-family: var(--font-display); font-size: 2.5rem; color: var(--primary); font-weight: 700; line-height: 1; margin-bottom: 8px; }
+.stat-label { font-size: 0.9rem; color: var(--gray-500); line-height: 1.2; }
+
+/* ===================================================
+   8. REFERENCE (Testimonials)
+   =================================================== */
+.testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; }
+.testimonial-card { background: var(--white); padding: 40px; border-radius: 24px; box-shadow: var(--shadow-sm); border: 1px solid var(--gray-100); }
+.testimonial-stars { color: #f59e0b; margin-bottom: 16px; letter-spacing: 2px; }
+.testimonial-text { font-family: var(--font-display); font-size: 1.2rem; color: var(--gray-900); font-style: italic; margin-bottom: 24px; }
+.testimonial-author { display: flex; align-items: center; gap: 16px; }
+.avatar { width: 48px; height: 48px; background: var(--primary-bg); color: var(--primary-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem; }
+.testimonial-author strong { display: block; color: var(--gray-900); }
+.testimonial-author span { font-size: 0.85rem; color: var(--gray-500); }
+
+/* ===================================================
+   9. VIP SLUŽBY
    =================================================== */
 .vip-section-header { margin: 80px 0 40px; text-align: center; }
 .vip-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; }
@@ -158,97 +247,166 @@ body {
 .vip-btn-primary:hover { background: #9333ea; }
 
 /* ===================================================
-   BLOG
+   10. GALERIE
+   =================================================== */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 48px; }
+.gallery-item { background: var(--white); border-radius: 16px; overflow: hidden; }
+.gallery-hidden { display: none; }
+.gallery-grid.expanded .gallery-hidden { display: block; } /* Zobrazení skrytých karet po kliknutí */
+.gallery-ba { display: flex; height: 350px; }
+.gallery-half { position: relative; width: 50%; height: 100%; overflow: hidden; }
+.gallery-img { width: 100%; height: 100%; object-fit: cover; }
+.gallery-tag { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.6); color: white; padding: 4px 12px; border-radius: 50px; font-size: 0.8rem; backdrop-filter: blur(4px); }
+.gallery-caption { padding: 20px; text-align: center; font-weight: 500; color: var(--gray-900); }
+.section-cta { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 16px; }
+
+/* ===================================================
+   11. BLOG
    =================================================== */
 .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 32px; }
-.blog-card { background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid var(--gray-100); }
-.blog-img-placeholder { height: 200px; background: #f3e8ff; display: flex; align-items: center; justify-content: center; font-size: 4rem; }
+.blog-card { background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--gray-100); }
+.blog-img-placeholder { height: 200px; background: var(--primary-bg); display: flex; align-items: center; justify-content: center; font-size: 4rem; }
 .blog-body { padding: 32px; }
 .blog-date { font-size: 0.85rem; color: var(--primary); font-weight: 600; display: block; margin-bottom: 12px; }
 .blog-title { font-family: var(--font-display); font-size: 1.4rem; color: var(--gray-900); margin-bottom: 16px; }
 .blog-body p { margin-bottom: 24px; font-size: 0.95rem; }
 
 /* ===================================================
-   BENTO GRID (Kontakt & Mapy)
+   12. DOPORUČENÉ PRODUKTY
+   =================================================== */
+.products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
+.product-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); padding: 32px; text-align: center; transition: box-shadow 0.3s; }
+.product-card:hover { box-shadow: var(--shadow-md); }
+.product-img { font-size: 3rem; margin-bottom: 16px; }
+.product-card h3 { font-family: var(--font-display); color: var(--gray-900); margin-bottom: 8px; font-size: 1.2rem; }
+.product-card p { font-size: 0.9rem; color: var(--gray-500); margin-bottom: 24px; }
+
+/* ===================================================
+   13. BENTO GRID (Kontakt & Mapy)
    =================================================== */
 .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .bento-card { background: var(--white); border-radius: 24px; padding: 40px; border: 1px solid var(--gray-100); box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
 .bento-primary { grid-column: span 2; background: linear-gradient(135deg, #f3e8ff 0%, #e0e7ff 100%); display: flex; align-items: center; }
 .bento-map { grid-column: span 3; }
 .bento-card h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--gray-900); margin-bottom: 16px; }
-.bento-list { list-style: none; margin-bottom: 0; }
+.bento-list { list-style: none; margin-bottom: 0; padding: 0; }
 .bento-list li { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--gray-100); }
 .bento-list li:last-child { border-bottom: none; }
 .bento-actions { display: flex; gap: 16px; margin-top: 24px; }
 
 /* ===================================================
-   MODÁLNÍ OKNO
+   14. VOUCHER & DÁRKY
+   =================================================== */
+.voucher-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; background: var(--white); padding: 64px; border-radius: 32px; box-shadow: var(--shadow-sm); }
+.voucher-features { list-style: none; margin-bottom: 40px; }
+.voucher-features li { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; color: var(--gray-900); }
+.feature-dot { width: 24px; height: 24px; background: var(--primary-bg); border-radius: 50%; position: relative; }
+.feature-dot::after { content: '✓'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--primary); font-size: 12px; font-weight: bold; }
+.voucher-card { background: linear-gradient(135deg, var(--gray-900), #374151); border-radius: 24px; padding: 40px; color: var(--white); position: relative; overflow: hidden; box-shadow: 0 20px 40px -10px rgba(0,0,0,0.2); }
+.voucher-card-bg { position: absolute; top: -50%; right: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(139,92,246,0.2) 0%, transparent 50%); z-index: 1; }
+.voucher-card-content { position: relative; z-index: 2; }
+.voucher-card-logo { font-family: var(--font-display); font-size: 1.2rem; display: block; margin-bottom: 40px; }
+.voucher-card-title { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-light); margin-bottom: 8px; }
+.voucher-card-amount { font-family: var(--font-display); font-size: 3.5rem; margin-bottom: 40px; line-height: 1; }
+.voucher-card-validity { font-size: 0.85rem; color: var(--gray-400); }
+
+/* ===================================================
+   15. FAQ (Akordeon)
+   =================================================== */
+.faq-list { border-top: 1px solid var(--gray-200); }
+.faq-item { border-bottom: 1px solid var(--gray-200); }
+.faq-trigger { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 24px 0; background: none; border: none; font-size: 1.1rem; font-weight: 600; color: var(--gray-900); cursor: pointer; text-align: left; }
+.faq-icon { font-size: 1.5rem; color: var(--primary); transition: transform 0.3s ease; }
+.faq-answer { max-height: 0; overflow: hidden; transition: all 0.3s ease; opacity: 0; }
+.faq-answer p { padding-bottom: 24px; color: var(--gray-600); }
+.faq-item.open .faq-answer { max-height: 500px; opacity: 1; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+
+/* ===================================================
+   16. SOCIÁLNÍ SÍTĚ
+   =================================================== */
+.social-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; }
+.social-card { background: var(--white); border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-sm); }
+.social-card-header { padding: 16px 24px; display: flex; align-items: center; gap: 12px; font-weight: 600; color: var(--gray-900); border-bottom: 1px solid var(--gray-100); }
+.social-icon { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--white); }
+.social-fb { background: #1877f2; }
+.social-ig { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+
+/* ===================================================
+   17. PATIČKA A COOKIES
+   =================================================== */
+.section-cta-final { background: var(--primary); padding: 120px 0; }
+.footer { background: var(--gray-900); color: var(--white); padding: 80px 0 40px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 64px; }
+.footer-tagline { color: var(--gray-400); margin: 24px 0; }
+.footer-socials { display: flex; gap: 12px; }
+.social-btn { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--white); text-decoration: none; transition: background 0.2s; }
+.social-btn:hover { background: var(--primary); }
+.footer-col h4 { font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 24px; }
+.footer-col a, .footer-col p { color: var(--gray-400); text-decoration: none; display: block; margin-bottom: 12px; transition: color 0.2s; }
+.footer-col a:hover { color: var(--primary-light); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 32px; display: flex; justify-content: space-between; align-items: center; color: var(--gray-500); font-size: 0.9rem; }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a { color: var(--gray-500); text-decoration: none; }
+.footer-links a:hover { color: var(--white); }
+
+.cookie-banner { position: fixed; bottom: -100%; left: 0; right: 0; background: var(--white); box-shadow: 0 -4px 20px rgba(0,0,0,0.1); padding: 24px; z-index: 9999; transition: bottom 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+.cookie-banner.show { bottom: 0; }
+.cookie-content { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.cookie-actions { display: flex; gap: 12px; }
+
+/* ===================================================
+   18. MODÁLNÍ OKNO PRO BLOG
    =================================================== */
 .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(5px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
 .modal-overlay.active { opacity: 1; pointer-events: all; }
 .modal-content { background: var(--white); width: 100%; max-width: 800px; max-height: 90vh; border-radius: var(--radius-lg); position: relative; overflow-y: auto; transform: translateY(20px); transition: transform 0.3s ease; }
 .modal-overlay.active .modal-content { transform: translateY(0); }
-.modal-close { position: absolute; top: 24px; right: 24px; background: #f3f4f6; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 1.2rem; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10; transition: background 0.2s; }
-.modal-close:hover { background: #e5e7eb; }
+.modal-close { position: absolute; top: 24px; right: 24px; background: var(--gray-100); border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 1.2rem; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10; transition: background 0.2s; }
+.modal-close:hover { background: var(--gray-200); }
 .modal-body { padding: 48px; }
 .modal-text-content h4 { font-family: var(--font-display); font-size: 1.3rem; color: var(--gray-900); margin: 32px 0 16px; }
 .modal-text-content p { margin-bottom: 16px; line-height: 1.8; color: var(--gray-600); }
 
 /* ===================================================
-   MOBILNÍ MENU A RESPONSIVITA
+   19. RESPONSIVITA & MOBILNÍ MENU
    =================================================== */
-.hamburger { display: none; }
-
 @media (max-width: 992px) {
     .header-cta { display: none; }
     
+    /* Vyjížděcí menu na mobilech */
     .nav {
         position: fixed;
-        top: 0;
-        right: -100%;
-        width: 100%;
-        height: 100vh;
+        top: 0; right: -100%; /* Defaultně schované vpravo */
+        width: 100%; height: 100vh;
         background-color: var(--white);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: right 0.3s ease-in-out;
+        display: flex; flex-direction: column; justify-content: center; align-items: center;
+        transition: right 0.4s ease-in-out; 
         z-index: 99;
     }
-    .nav.active { right: 0; }
+    .nav.active { right: 0; } /* Po kliknutí na hamburger menu vyjede */
     
     .nav-links { flex-direction: column; gap: 24px; text-align: center; font-size: 1.5rem; margin-bottom: 40px; }
     .nav-mobile-extras { display: block; text-align: center; }
     
+    /* Hamburger tlačítko */
     .hamburger {
-        position: relative;
-        z-index: 100;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 21px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
+        position: relative; z-index: 100; display: flex; flex-direction: column; justify-content: space-between;
+        width: 30px; height: 21px; background: transparent; border: none; cursor: pointer;
     }
-    .hamburger span {
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: var(--gray-900);
-        border-radius: 3px;
-        transition: all 0.3s ease;
-    }
-    /* Hamburger animace na Křížek */
+    .hamburger span { display: block; width: 100%; height: 3px; background-color: var(--gray-900); border-radius: 3px; transition: all 0.3s ease; }
+    
+    /* Hamburger animace na křížek (třídu přidává JS) */
     .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
     .hamburger.active span:nth-child(2) { opacity: 0; }
     .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -7px); }
 
+    /* Úpravy layoutu pro menší obrazovky */
+    .hero-content, .about-grid, .voucher-grid { grid-template-columns: 1fr; gap: 40px; }
     .bento-grid { grid-template-columns: 1fr; }
     .bento-primary, .bento-map { grid-column: span 1; }
     .bento-actions { flex-direction: column; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
     .modal-body { padding: 32px 24px; }
 }
 
@@ -256,6 +414,13 @@ body {
     .heading-xl { font-size: 2.5rem; }
     .heading-lg { font-size: 2rem; }
     .section { padding: 60px 0; }
+    .hero { padding: 120px 0 60px; }
+    .hero-actions { flex-direction: column; }
+    
+    /* VIP karty se na mobilu nezvětšují při hoveru */
     .vip-card.vip-highlight { transform: none; }
     .vip-card.vip-highlight:hover { transform: translateY(-8px); }
+    
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
 }
