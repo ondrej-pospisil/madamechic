@@ -5,20 +5,24 @@ document.addEventListener('DOMContentLoaded', () => {
         header.classList.toggle('scrolled', window.scrollY > 50);
     }, { passive: true });
 
-    // --- Mobile hamburger menu ---
+  // --- Mobile hamburger menu ---
     const hamburger = document.getElementById('hamburger');
     const nav = document.getElementById('nav');
     if (hamburger && nav) {
         hamburger.addEventListener('click', () => {
+            // ZMĚNA: Přidána/Odebrána třída 'active' pro oba (hamburger i menu)
             hamburger.classList.toggle('active');
-            nav.classList.toggle('open');
-            document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
+            nav.classList.toggle('active');
+            
+            // ZMĚNA: Podmínka nyní kontroluje třídu 'active'
+            document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
         });
 
         nav.querySelectorAll('.nav-link, .nav-mobile-cta').forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
-                nav.classList.remove('open');
+                // ZMĚNA: Odebírá třídu 'active'
+                nav.classList.remove('active'); 
                 document.body.style.overflow = '';
             });
         });
