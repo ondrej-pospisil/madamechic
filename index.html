@@ -78,7 +78,7 @@
                 <div class="nav-links">
                     <a href="#home" class="nav-link active">Home</a>
                     <a href="#about" class="nav-link">O nás</a>
-                    <a href="#services" class="nav-link">Služby</a>
+                    <a href="#sluzby" class="nav-link">Služby</a>
                     <a href="#gallery" class="nav-link">Galerie</a>
                     <a href="#blog" class="nav-link">Blog</a>
                     <a href="#voucher" class="nav-link">Voucher</a>
@@ -241,18 +241,17 @@
         </div>
     </section>
 
+    <!-- ================= STANDARDNÍ SLUŽBY ================= -->
     <section class="section bg-light" id="sluzby">
         <div class="container">
             
-            <!-- ================= STANDARDNÍ SLUŽBY ================= -->
             <div class="section-header" data-animate>
                 <span class="label label-center">Služby</span>
                 <h2 class="heading-lg heading-center">Co pro vás připravíme</h2>
                 <p style="text-align: center; color: var(--gray-600); max-width: 600px; margin: 0 auto;">Každá služba je přizpůsobena vašim přáním a typu vlasů.</p>
             </div>
 
-            <!-- Třída pricing-grid (nebo services-grid), kterou už máš ve svém CSS -->
-            <div class="pricing-grid" data-animate style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-bottom: 80px;">
+            <div class="pricing-grid" data-animate style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
                 
                 <!-- 1. Dámské -->
                 <div class="pricing-card" style="background: white; border-radius: 16px; padding: 32px; text-align: center; border: 1px solid #f3f4f6; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
@@ -291,12 +290,17 @@
                     <a href="#kontakt" class="btn btn-outline btn-sm" style="width: 100%; border-radius: 50px; border-color: #c4b5fd; color: #7c3aed;">Domluvit termín</a>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- ================= VIP SEKCE ================= -->
-            <div class="vip-section-header" data-animate>
-                <span class="label label-center" style="background: #374151; color: #f3f4f6; border: none;">VIP Zážitek</span>
-                <h3 class="heading-lg heading-center">Exkluzivní balíčky péče</h3>
-                <p style="text-align: center; color: var(--gray-600); max-width: 600px; margin: 0 auto;">Dopřejte si maximální luxus, odpočinek a individuální přístup. O vše se postaráme.</p>
+    <!-- ================= VIP SEKCE (Zcela oddělená, tmavá sekce) ================= -->
+    <section class="section" id="vip" style="background-color: #0f172a; padding: 100px 0;">
+        <div class="container">
+            
+            <div class="section-header" data-animate style="margin-bottom: 64px;">
+                <span class="label label-center" style="background: rgba(255,255,255,0.1); color: #e2e8f0; border: 1px solid rgba(255,255,255,0.2); display: inline-block;">VIP Zážitek</span>
+                <h2 class="heading-lg heading-center" style="color: #ffffff;">Exkluzivní balíčky péče</h2>
+                <p style="text-align: center; color: #94a3b8; max-width: 600px; margin: 0 auto;">Dopřejte si maximální luxus, odpočinek a individuální přístup. O vše se postaráme.</p>
             </div>
 
             <div class="vip-grid" data-animate>
@@ -399,7 +403,7 @@
 
             <!-- ================= HLAVNÍ TLAČÍTKO ================= -->
             <div style="text-align: center; margin-top: 56px;" data-animate>
-                <a href="#kontakt" class="btn btn-primary btn-lg" style="background: #8b5cf6; border-radius: 50px; padding: 16px 48px; border: none; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 14px rgba(139, 92, 246, 0.4); display: inline-block;">Kontaktujte nás</a>
+                <a href="#kontakt" class="btn btn-primary btn-lg" style="background: #8b5cf6; color: #ffffff; text-decoration: none; border-radius: 50px; padding: 16px 48px; border: none; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 14px rgba(139, 92, 246, 0.4); display: inline-block;">Kontaktujte nás</a>
             </div>
 
         </div>
