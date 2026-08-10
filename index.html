@@ -241,44 +241,57 @@
         </div>
     </section>
 
-    <section class="section" id="services">
+    <section class="section bg-light" id="sluzby">
         <div class="container">
+            
+            <!-- ================= STANDARDNÍ SLUŽBY ================= -->
             <div class="section-header" data-animate>
                 <span class="label label-center">Služby</span>
                 <h2 class="heading-lg heading-center">Co pro vás připravíme</h2>
-                <p class="text-body text-center text-muted">Každá služba je přizpůsobena vašim přáním a typu vlasů.</p>
+                <p style="text-align: center; color: var(--gray-600); max-width: 600px; margin: 0 auto;">Každá služba je přizpůsobena vašim přáním a typu vlasů.</p>
             </div>
-            <div class="services-grid" data-animate>
-                <div class="service-card">
-                    <div class="service-icon-wrap"><span class="service-icon">✂️</span></div>
-                    <h3 class="service-name">Stříhání dámské</h3>
-                    <p class="service-desc">Profesionální střih vlasů dle typu a přání klientky.</p>
-                    <div class="service-price">od <strong>400 Kč</strong></div>
-                    <a href="#kontakt" class="btn btn-outline btn-sm">Domluvit termín</a>
+
+            <!-- Třída pricing-grid (nebo services-grid), kterou už máš ve svém CSS -->
+            <div class="pricing-grid" data-animate style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-bottom: 80px;">
+                
+                <!-- 1. Dámské -->
+                <div class="pricing-card" style="background: white; border-radius: 16px; padding: 32px; text-align: center; border: 1px solid #f3f4f6; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                    <div style="font-size: 2rem; background: #f3e8ff; width: 64px; height: 64px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">✂️</div>
+                    <h3 style="font-family: var(--font-display); font-size: 1.25rem; margin-bottom: 12px; color: #111827;">Stříhání dámské</h3>
+                    <p style="color: #6b7280; font-size: 0.95rem; margin-bottom: 24px; min-height: 48px;">Profesionální střih vlasů dle typu a přání klientky.</p>
+                    <div style="font-size: 0.9rem; color: #6b7280; margin-bottom: 24px;">od <span style="font-size: 1.25rem; font-weight: 700; color: #8b5cf6;">400 Kč</span></div>
+                    <a href="#kontakt" class="btn btn-outline btn-sm" style="width: 100%; border-radius: 50px; border-color: #c4b5fd; color: #7c3aed;">Domluvit termín</a>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon-wrap"><span class="service-icon">💈</span></div>
-                    <h3 class="service-name">Stříhání pánské</h3>
-                    <p class="service-desc">Úprava vlasů a vousů, moderní střihy.</p>
-                    <div class="service-price">od <strong>300 Kč</strong></div>
-                    <a href="#kontakt" class="btn btn-outline btn-sm">Domluvit termín</a>
+
+                <!-- 2. Pánské -->
+                <div class="pricing-card" style="background: white; border-radius: 16px; padding: 32px; text-align: center; border: 1px solid #f3f4f6; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                    <div style="font-size: 2rem; background: #f3e8ff; width: 64px; height: 64px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">💈</div>
+                    <h3 style="font-family: var(--font-display); font-size: 1.25rem; margin-bottom: 12px; color: #111827;">Stříhání pánské</h3>
+                    <p style="color: #6b7280; font-size: 0.95rem; margin-bottom: 24px; min-height: 48px;">Úprava vlasů a vousů, moderní střihy.</p>
+                    <div style="font-size: 0.9rem; color: #6b7280; margin-bottom: 24px;">od <span style="font-size: 1.25rem; font-weight: 700; color: #8b5cf6;">300 Kč</span></div>
+                    <a href="#kontakt" class="btn btn-outline btn-sm" style="width: 100%; border-radius: 50px; border-color: #c4b5fd; color: #7c3aed;">Domluvit termín</a>
                 </div>
-                <div class="service-card service-card-featured">
-                    <span class="service-badge">Nejoblíbenější</span>
-                    <div class="service-icon-wrap"><span class="service-icon">🎨</span></div>
-                    <h3 class="service-name">Barvení vlasů</h3>
-                    <p class="service-desc">Profesionální barvení, přirozené přechody a tónování.</p>
-                    <div class="service-price">od <strong>800 Kč</strong></div>
-                    <a href="#kontakt" class="btn btn-primary btn-sm">Domluvit termín</a>
+
+                <!-- 3. Barvení (Zvýrazněná) -->
+                <div class="pricing-card highlight" style="background: white; border-radius: 16px; padding: 32px; text-align: center; border: 1px solid #a855f7; box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.15); position: relative; transform: scale(1.02);">
+                    <div style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: #8b5cf6; color: white; padding: 4px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">Nejoblíbenější</div>
+                    <div style="font-size: 2rem; background: #f3e8ff; width: 64px; height: 64px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">🎨</div>
+                    <h3 style="font-family: var(--font-display); font-size: 1.25rem; margin-bottom: 12px; color: #111827;">Barvení vlasů</h3>
+                    <p style="color: #6b7280; font-size: 0.95rem; margin-bottom: 24px; min-height: 48px;">Profesionální barvení, přirozené přechody a tónování.</p>
+                    <div style="font-size: 0.9rem; color: #6b7280; margin-bottom: 24px;">od <span style="font-size: 1.25rem; font-weight: 700; color: #8b5cf6;">800 Kč</span></div>
+                    <a href="#kontakt" class="btn btn-primary btn-sm" style="width: 100%; border-radius: 50px; background: #8b5cf6; border: none;">Domluvit termín</a>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon-wrap"><span class="service-icon">👶</span></div>
-                    <h3 class="service-name">Dětské střihy</h3>
-                    <p class="service-desc">Šetrné stříhání pro děti, přátelská atmosféra.</p>
-                    <div class="service-price">od <strong>250 Kč</strong></div>
-                    <a href="#kontakt" class="btn btn-outline btn-sm">Domluvit termín</a>
+
+                <!-- 4. Dětské -->
+                <div class="pricing-card" style="background: white; border-radius: 16px; padding: 32px; text-align: center; border: 1px solid #f3f4f6; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                    <div style="font-size: 2rem; background: #f3e8ff; width: 64px; height: 64px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">👶</div>
+                    <h3 style="font-family: var(--font-display); font-size: 1.25rem; margin-bottom: 12px; color: #111827;">Dětské střihy</h3>
+                    <p style="color: #6b7280; font-size: 0.95rem; margin-bottom: 24px; min-height: 48px;">Šetrné stříhání pro děti, přátelská atmosféra.</p>
+                    <div style="font-size: 0.9rem; color: #6b7280; margin-bottom: 24px;">od <span style="font-size: 1.25rem; font-weight: 700; color: #8b5cf6;">250 Kč</span></div>
+                    <a href="#kontakt" class="btn btn-outline btn-sm" style="width: 100%; border-radius: 50px; border-color: #c4b5fd; color: #7c3aed;">Domluvit termín</a>
                 </div>
             </div>
+
             <!-- ================= VIP SEKCE ================= -->
             <div class="vip-section-header" data-animate>
                 <span class="label label-center" style="background: #374151; color: #f3f4f6; border: none;">VIP Zážitek</span>
@@ -383,12 +396,13 @@
                 </div>
 
             </div>
-            <!-- ================= KONEC VIP SEKCE ================= -->
-            <div class="section-cta" data-animate>
-                <a href="#kontakt" class="btn btn-primary btn-lg">Kontaktujte nás</a>
+
+            <!-- ================= HLAVNÍ TLAČÍTKO ================= -->
+            <div style="text-align: center; margin-top: 56px;" data-animate>
+                <a href="#kontakt" class="btn btn-primary btn-lg" style="background: #8b5cf6; border-radius: 50px; padding: 16px 48px; border: none; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 14px rgba(139, 92, 246, 0.4); display: inline-block;">Kontaktujte nás</a>
             </div>
+
         </div>
-        
     </section>
 
     <section class="section section-dark" id="gallery">
