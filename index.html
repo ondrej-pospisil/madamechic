@@ -604,19 +604,45 @@
                 </div>
 
                 <!-- 3. Lokace / Mapa + Parkování -->
-                <div class="bento-card bento-map">
+            <div class="bento-card bento-map">
                     <h3>Kde nás najdete</h3>
                     <p>Boženy Němcové 131, Český Brod. <strong>Můžete pohodlně zaparkovat přímo před studiem.</strong></p>
                     
-                    <!-- Odkaz směřující přímo na profil kadeřnictví v Google Mapách -->
-                    <a href="https://maps.app.goo.gl/Qx3Q5u8mQ5x1yK4p9" target="_blank" rel="noopener noreferrer" style="display: block; margin-top: 16px; border-radius: 8px; overflow: hidden; position: relative; height: 350px; background: #e5e7eb; text-decoration: none;">
+                    <!-- Odkaz s bezpečnou vyhledávací URL adresou a efektem po najetí -->
+                    <a href="https://www.google.com/maps/search/?api=1&query=Boženy+Němcové+131,+Český+Brod" target="_blank" rel="noopener noreferrer" style="display: block; margin-top: 16px; border-radius: 8px; overflow: hidden; position: relative; height: 320px; background-color: #f8fafc; border: 1px solid #e2e8f0; text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease;" onmouseover="this.style.boxShadow='0 10px 25px rgba(0,0,0,0.05)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.boxShadow='none'; this.style.transform='none';">
                         
-                        <!-- Zde si pak dej screenshot své mapy, např. src="img/mapa.jpg" -->
-                        <img src="https://placehold.co/800x600/e5e7eb/6b7280?text=Klikněte+pro+otevření+mapy" alt="Mapa kadeřnictví" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                        
-                        <!-- Plovoucí tlačítko uprostřed -->
-                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 12px 24px; border-radius: 50px; color: #111; font-weight: 600; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 8px;">
-                            📍 Otevřít v Google Mapách
+                        <!-- Low-fidelity abstraktní SVG mapa -->
+                        <svg width="100%" height="100%" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" style="position: absolute; inset: 0;">
+                            <!-- Abstraktní parky -->
+                            <path d="M 50 50 Q 150 0 200 100 T 50 150 Z" fill="#f1f5f9" opacity="0.8"/>
+                            <path d="M 600 250 Q 700 200 750 300 T 600 350 Z" fill="#f1f5f9" opacity="0.8"/>
+                            
+                            <!-- Silnice -->
+                            <path d="M-100 150 Q 200 200 400 150 T 900 200" fill="none" stroke="#e2e8f0" stroke-width="24" stroke-linecap="round"/>
+                            <path d="M-50 250 Q 300 300 500 100 T 900 50" fill="none" stroke="#e2e8f0" stroke-width="12" stroke-linecap="round"/>
+                            <path d="M 350 -50 L 450 450" fill="none" stroke="#ffffff" stroke-width="32"/>
+                            <path d="M 500 -50 L 600 450" fill="none" stroke="#ffffff" stroke-width="16"/>
+                            <path d="M 150 -50 L 250 450" fill="none" stroke="#ffffff" stroke-width="16"/>
+                            
+                            <!-- Špendlík a lokace (s fialovou barvou) -->
+                            <g transform="translate(400, 180)">
+                                <!-- Jemný pulz na pozadí -->
+                                <circle cx="0" cy="0" r="45" fill="#a855f7" opacity="0.1" />
+                                <circle cx="0" cy="0" r="25" fill="#a855f7" opacity="0.2" />
+                                <!-- Ikona pinu -->
+                                <path d="M0 -28 C -9.9 -28 -18 -19.9 -18 -10 C -18 4.5 0 28 0 28 C 0 28 18 4.5 18 -10 C 18 -19.9 9.9 -28 0 -28 Z" fill="#9333ea"/>
+                                <circle cx="0" cy="-10" r="7" fill="white"/>
+                            </g>
+                        </svg>
+
+                        <!-- Tlačítko uprostřed, které vybízí ke kliknutí -->
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); margin-top: 50px; background: white; padding: 12px 24px; border-radius: 50px; color: #111827; font-weight: 600; font-size: 0.95rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: flex; align-items: center; gap: 8px;">
+                            Otevřít mapu
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
                         </div>
                     </a>
                 </div>
