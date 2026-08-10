@@ -607,17 +607,18 @@
                 <div class="bento-card bento-map">
                     <h3>Kde nás najdete</h3>
                     <p>Boženy Němcové 131, Český Brod. <strong>Můžete pohodlně zaparkovat přímo před studiem.</strong></p>
-
-                    <div style="margin-top: 16px; border-radius: 8px; overflow: hidden; height: 350px; display: block; width: 100%; background-color: #f3f4f6;">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d166.17443973154118!2d14.853179688726776!3d50.07100333982192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c0adbbb6451e3%3A0xfca534ab2a859dfa!2sVlasov%C3%A9%20studio%20Madame%20Chic!5e0!3m2!1scs!2scz!4v1786376426100!5m2!1scs!2scz"
-                            width="100%"
-                            height="350"
-                            style="border:0; display: block;"
-                            allowfullscreen=""
-                            referrerpolicy="strict-origin-when-cross-origin">
-                        </iframe>
-                    </div>
+                    
+                    <!-- Odkaz směřující přímo na profil kadeřnictví v Google Mapách -->
+                    <a href="https://maps.app.goo.gl/Qx3Q5u8mQ5x1yK4p9" target="_blank" rel="noopener noreferrer" style="display: block; margin-top: 16px; border-radius: 8px; overflow: hidden; position: relative; height: 350px; background: #e5e7eb; text-decoration: none;">
+                        
+                        <!-- Zde si pak dej screenshot své mapy, např. src="img/mapa.jpg" -->
+                        <img src="https://placehold.co/800x600/e5e7eb/6b7280?text=Klikněte+pro+otevření+mapy" alt="Mapa kadeřnictví" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                        
+                        <!-- Plovoucí tlačítko uprostřed -->
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 12px 24px; border-radius: 50px; color: #111; font-weight: 600; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 8px;">
+                            📍 Otevřít v Google Mapách
+                        </div>
+                    </a>
                 </div>
 
                 <!-- 4. Karta Google Hodnocení (Celá klikací, světlý barevný design) -->
